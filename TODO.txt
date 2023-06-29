@@ -1,0 +1,11 @@
+1. Add logging using SLF4J2/logback
+2. Create DB to keep track of books that have been analyzed
+    a. table to keep track of book that have been analyzed
+    b. table to keep the analysis of the book
+
+
+Sub-idea
+1. A chapter a week periodicals on a host personal website.
+    a. Books will be handpicked
+    b. Final chapter will send an alert to phone
+    c. DB to keep track of books we've read. and progress of current book.

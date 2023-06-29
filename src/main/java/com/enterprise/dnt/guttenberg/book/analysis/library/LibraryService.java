@@ -7,19 +7,23 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.io.IOException;
-import java.util.Map;
+import java.util.List;
 
 //import static org.junit.Assert.assertEquals;
 
 //import j
 //@Slf4J
 @Component
-public class libraryService {
+public class LibraryService {
 //    Map<Book>
   private final String connectionString = "https://gutendex.com";
 //  Logger
 //  private final WebClient webClient;
-  public Book getBookByLanguage(String language) {
+  public List<Book> getBookByLanguage(String language) {
+    return null;
+  }
+
+  public List<Book> getBookByAuthor(int start, int end){
     return null;
   }
 
