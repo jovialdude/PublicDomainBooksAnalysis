@@ -5,6 +5,8 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class WordRepository implements WordDAO {
   private EntityManager entityManager;
@@ -19,4 +21,8 @@ public class WordRepository implements WordDAO {
   public void save(Word word) {
     entityManager.persist(word);
   }
+
+  @Override
+  @Transactional
+  public void save(List<Word> word) {}
 }

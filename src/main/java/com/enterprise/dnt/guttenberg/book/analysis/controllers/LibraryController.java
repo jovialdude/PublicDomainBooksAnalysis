@@ -34,7 +34,8 @@ public class LibraryController {
   @GetMapping("/book/analysis")
   public Document getAnalysis(@RequestParam(name="id") String id) throws IOException {
     Book b = libraryService.getBook(id);
-    return bookAnalyzeService.analyze(b);
+//    return bookAnalyzeService.analyze(b);
+    return null;
   }
 
 //  @GetMapping("/book/author")
@@ -42,9 +43,6 @@ public class LibraryController {
   @GetMapping("/book/author")
   public Integer getBookByYear(@RequestParam(name="start") int start,
                                   @RequestParam(name="end") int end) {
-//    List<String> list = new ArrayList<>();
-//    list.add(Integer.toString(start), Integer.toString(end));
-//    list.add(end);
     return start+end;
   }
 }

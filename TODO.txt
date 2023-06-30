@@ -1,7 +1,12 @@
 1. Add logging using SLF4J2/logback
-2. Create DB to keep track of books that have been analyzed
-    a. table to keep track of book that have been analyzed
-    b. table to keep the analysis of the book
+2. Create DB to keep track of books that have been analyzed--done
+    a. table to keep track of book that have been analyzed--done
+    b. table to keep the analysis of the book--done
+3. Persist multiple objects with JPA batch
+4. Implement multithreading
+5. Implement timer for each task.
+6. Write some damn test.
+7. Set up local api environment for gutendex api.
 
 
 Sub-idea
