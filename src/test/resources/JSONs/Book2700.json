@@ -1,0 +1,34 @@
+{
+  "id": 2700,
+  "title": "Medical Essays, 1842-1882",
+  "subjects": [
+    "Education, Medical -- Massachusetts -- 19th century",
+    "Homeopathy",
+    "Libraries, Medical -- Massachusetts -- 19th century",
+    "Medicine"
+  ],
+  "authors": [
+    {
+      "name": "Holmes, Oliver Wendell",
+      "birth_year": 1809,
+      "death_year": 1894
+    }
+  ],
+  "translators": [],
+  "bookshelves": [],
+  "languages": [
+    "en"
+  ],
+  "copyright": false,
+  "media_type": "Text",
+  "formats": {
+    "application/x-mobipocket-ebook": "https://www.gutenberg.org/ebooks/2700.kf8.images",
+    "application/epub+zip": "https://www.gutenberg.org/ebooks/2700.epub3.images",
+    "image/jpeg": "https://www.gutenberg.org/cache/epub/2700/pg2700.cover.medium.jpg",
+    "text/plain; charset=utf-8": "https://www.gutenberg.org/files/2700/2700-0.txt",
+    "text/html": "https://www.gutenberg.org/ebooks/2700.html.images",
+    "text/html; charset=utf-8": "https://www.gutenberg.org/files/2700/2700-h/2700-h.htm",
+    "application/rdf+xml": "https://www.gutenberg.org/ebooks/2700.rdf"
+  },
+  "download_count": 67
+}

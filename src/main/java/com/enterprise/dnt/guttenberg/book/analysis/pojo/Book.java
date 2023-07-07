@@ -1,14 +1,18 @@
-package com.enterprise.dnt.guttenberg.book.analysis.book;
+package com.enterprise.dnt.guttenberg.book.analysis.pojo;
 
-import com.enterprise.dnt.guttenberg.book.analysis.person.Person;
+import com.enterprise.dnt.guttenberg.book.analysis.pojo.person.Person;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Map;
+import java.util.Objects;
 
 
 @Component
+@JsonIgnoreProperties(value = {"download_count"})
 public class Book implements Serializable {
   @JsonProperty("id")
   private int id;
@@ -48,7 +52,6 @@ public class Book implements Serializable {
     this.copyright = copyright;
     this.mediaType = mediaType;
     this.formats = formats;
-    this.downloadCount = downloadCount;
   }
 
   public int getId() {
@@ -137,5 +140,39 @@ public class Book implements Serializable {
 
   public void setDownloadCount(int number) {
     this.downloadCount = number;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Book book = (Book) o;
+    return id == book.id &&
+        copyright == book.copyright &&
+        Objects.equals(title, book.title) &&
+        Objects.equals(mediaType, book.mediaType) &&
+        Objects.equals(formats, book.formats);
+  }
+
+  @Override
+  public int hashCode() {
+    int result = Objects.hash(id, title, copyright, mediaType, formats);
+    result = 31 * result + Arrays.hashCode(subjects);
+    result = 31 * result + Arrays.hashCode(authors);
+    result = 31 * result + Arrays.hashCode(translators);
+    result = 31 * result + Arrays.hashCode(bookshelves);
+    result = 31 * result + Arrays.hashCode(languages);
+    return result;
+  }
+
+  @Override
+  public String toString() {
+    return "Book{" +
+        "id=" + id +
+        ", title='" + title + '\'' +
+        ", copyright=" + copyright +
+        ", mediaType='" + mediaType + '\'' +
+        ", formats=" + formats +
+        '}';
   }
 }

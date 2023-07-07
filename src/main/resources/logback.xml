@@ -13,7 +13,7 @@
         class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG}/spring-boot-logger.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <pattern>%d %p %C{1} [%t] %m%n</pattern>
+            <pattern>%d %p %C{0] [%t] %m%n</pattern>
         </encoder>
 
         <rollingPolicy
@@ -33,7 +33,7 @@
 <!--        <appender-ref ref="Console"/>-->
     </root>
 
-    <logger name="com.enterprise.dnt" level="trace" additivity = "false">
+    <logger name="com.enterprise.dnt.guttenberg.book.analysis" level="trace" additivity = "false">
         <appender-ref ref="RollingFile"/>
     </logger>
 </configuration>

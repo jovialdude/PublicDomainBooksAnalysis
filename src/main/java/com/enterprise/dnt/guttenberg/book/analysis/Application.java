@@ -1,13 +1,10 @@
 package com.enterprise.dnt.guttenberg.book.analysis;
 
-import com.enterprise.dnt.guttenberg.book.analysis.book.Book;
-import com.enterprise.dnt.guttenberg.book.analysis.book.BookAnalyzeService;
-import com.enterprise.dnt.guttenberg.book.analysis.library.LibraryService;
-import com.enterprise.dnt.guttenberg.book.analysis.word.Word;
-import com.enterprise.dnt.guttenberg.book.analysis.word.WordDAO;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
+import com.enterprise.dnt.guttenberg.book.analysis.pojo.Book;
+import com.enterprise.dnt.guttenberg.book.analysis.services.BookAnalyzeService;
+import com.enterprise.dnt.guttenberg.book.analysis.services.LibraryService;
+import com.enterprise.dnt.guttenberg.book.analysis.pojo.Word;
+import com.enterprise.dnt.guttenberg.book.analysis.intefaces.dao.WordDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -28,17 +25,18 @@ public class Application {
 	public CommandLineRunner commandLineRunner(BookAnalyzeService bookAnalyzeService,
 																						 LibraryService libraryService) {
 		return runner-> {
-//			saveWord(wordDAO);
-//			System.out.println("LOLOLOL");
-			analyzeBook(bookAnalyzeService, libraryService);
+//			analyzeBook(bookAnalyzeService, libraryService);
 		};
 	}
 
 	public void analyzeBook(BookAnalyzeService bookAnalyzeService,
 													LibraryService libraryService) throws IOException {
 		Book b = libraryService.getBook("2600");
-		String format = b.getFormats().get("text/html");
-
+		System.out.println("Got Book");
+		String formatConnectionString = b.getFormats().get("text/html");
+		System.out.println(formatConnectionString);
+		System.out.println("Got Format");
+		bookAnalyzeService.analyze(formatConnectionString);
 		return;
 	}
 

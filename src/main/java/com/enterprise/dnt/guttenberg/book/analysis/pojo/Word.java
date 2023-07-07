@@ -1,4 +1,4 @@
-package com.enterprise.dnt.guttenberg.book.analysis.word;
+package com.enterprise.dnt.guttenberg.book.analysis.pojo;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

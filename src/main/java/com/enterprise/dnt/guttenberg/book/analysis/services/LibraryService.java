@@ -1,6 +1,6 @@
-package com.enterprise.dnt.guttenberg.book.analysis.library;
+package com.enterprise.dnt.guttenberg.book.analysis.services;
 
-import com.enterprise.dnt.guttenberg.book.analysis.book.Book;
+import com.enterprise.dnt.guttenberg.book.analysis.pojo.Book;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -27,9 +27,9 @@ public class LibraryService {
     return null;
   }
 
+  String gutendexApiUrl  = "https://gutendex.com/";
 
   public Book getBook(String id) throws IOException {
-    String connectionString = "https://gutendex.com/";
     WebClient client = WebClient.builder()
         .baseUrl(connectionString)
         .build();

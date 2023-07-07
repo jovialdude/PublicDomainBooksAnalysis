@@ -1,4 +1,4 @@
-package com.enterprise.dnt.guttenberg.book.analysis.person;
+package com.enterprise.dnt.guttenberg.book.analysis.pojo.person;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
@@ -45,5 +45,16 @@ public class Person implements Serializable {
 
   public void setDeath_year(int death_year) {
     this.death_year = death_year;
+  }
+
+
+
+  @Override
+  public String toString() {
+    return "Person{" +
+        "name='" + name + '\'' +
+        ", birth_year=" + birth_year +
+        ", death_year=" + death_year +
+        '}';
   }
 }

@@ -1,5 +1,7 @@
-package com.enterprise.dnt.guttenberg.book.analysis.book;
+package com.enterprise.dnt.guttenberg.book.analysis.repository;
 
+import com.enterprise.dnt.guttenberg.book.analysis.intefaces.dao.AnalyzedBookDAO;
+import com.enterprise.dnt.guttenberg.book.analysis.pojo.AnalyzedBook;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;

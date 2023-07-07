@@ -1,5 +1,7 @@
-package com.enterprise.dnt.guttenberg.book.analysis.word;
+package com.enterprise.dnt.guttenberg.book.analysis.repository;
 
+import com.enterprise.dnt.guttenberg.book.analysis.intefaces.dao.WordDAO;
+import com.enterprise.dnt.guttenberg.book.analysis.pojo.Word;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +26,9 @@ public class WordRepository implements WordDAO {
 
   @Override
   @Transactional
-  public void save(List<Word> word) {}
+  public void save(List<Word> word) {
+    for (Word w: word) {
+      entityManager.persist(w);
+    }
+  }
 }

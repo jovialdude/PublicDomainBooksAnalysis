@@ -1,4 +1,4 @@
-package com.enterprise.dnt.guttenberg.book.analysis;
+package com.enterprise.dnt.guttenberg.book.test;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
